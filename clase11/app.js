@@ -34,4 +34,4 @@ const collectibles = {
 /* 5 - c */
 
 // collectibles.listFigures();
-console.log(collectibles.figuresByBrand("Bandai"));
+// console.log(collectibles.figuresByBrand("Bandai"));
