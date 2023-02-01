@@ -91,6 +91,7 @@ div.burger-menu i {
 article div.main-article {
   border-top: solid 1px #ebebeb;
   padding: 15px;
+  position: relative;
 }
 
 .price {
@@ -130,6 +131,20 @@ main section article img {
 main section article i,
 .discount {
   color: #39b54a;
+}
+
+article .main-article .fa-truck {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
 }
 
 @media (min-width: 481px) {
