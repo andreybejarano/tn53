@@ -1,10 +1,10 @@
 const express = require('express');
 
+const mainRoutes = require('./routes/main');
+
 const app = express();
 
-
-
-
+app.use('/', mainRoutes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
