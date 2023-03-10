@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (locals.user) { %>
+        <h1>Hola <%= user.name %>, elegiste el color: <%= user.color %> , tu email es: <%= user.email %> y tu edad es: <%= user.age %></h1>
+    <% } %>
+    <form action="/" method="post" style="display: flex; flex-direction: column; margin: 20px 40%;">
+        <label for="name">Ingrese su nombre</label>
+        <input type="text" name="name">
+        <select name="color" id="color">
+            <option value="">Selecciona una opcion</option>
+            <option value="red">Rojo</option>
+            <option value="blue">Azul</option>
+            <option value="yellow">Amarillo</option>
+        </select>
+        <label for="email">Ingrese su email</label>
+        <input type="email" name="email" id="email">
+        <label for="age">Ingrese su edad</label>
+        <input type="number" name="age" id="age">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
