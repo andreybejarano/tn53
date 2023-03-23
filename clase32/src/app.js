@@ -1,12 +1,14 @@
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 const mainRoutes = require('./routes/main');
 
 const app = express();
 
 app.use(session({ secret: 'secret' }));
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

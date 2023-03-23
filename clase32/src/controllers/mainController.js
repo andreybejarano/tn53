@@ -10,7 +10,14 @@ const controller = {
             age: req.body.age
         };
         req.session.user = user;
-        res.render('index', { user });
+        if (req.body.remember) {
+            res.cookie('user_email', user.email);
+        }
+        res.redirect('/dashboard');
+    },
+    dashboard: (req, res) => {
+        const { user } = req.session;
+        res.send(`hola ${user.name}`);
     }
 };
 
