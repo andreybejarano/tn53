@@ -12,8 +12,8 @@ app.set('views', path.resolve(__dirname, './views'));
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-app.use('/genre', genresRoutes);
-app.use('/movie', moviesRoutes);
+app.use('/genres', genresRoutes);
+app.use('/movies', moviesRoutes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
