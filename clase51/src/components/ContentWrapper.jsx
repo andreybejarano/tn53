@@ -2,6 +2,7 @@ import React from 'react'
 
 import TopBar from './TopBar'
 import ContentRowTop from './ContentRowTop'
+import Movie from './Movie';
 import Footer from './Footer'
 
 function ContentWrapper() {
@@ -18,6 +19,7 @@ function ContentWrapper() {
 				{/* <!-- Content Row Top --> */}
 				<ContentRowTop />
 				{/* <!--End Content Row Top--> */}
+				<Movie />
 			</div>
 			{/* <!-- End of MainContent --> */}
 
