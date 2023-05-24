@@ -18,9 +18,12 @@ function MovieList(props){
 MovieList.propTypes = {
     id: PropTypes.number,
     title: PropTypes.string,
-    rating: PropTypes.number,
+    rating: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+    ]),
     awards: PropTypes.number,
-    length: PropTypes.length
+    length: PropTypes.number
 }
 
 export default MovieList

@@ -11,7 +11,14 @@ class Movie extends React.Component {
     }
 
     componentDidMount() {
-
+        fetch('http://localhost:3001/api/movies')
+        .then(res => res.json())
+        .then(data => {
+            this.setState({ movies: data.data })
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 
     render() {
